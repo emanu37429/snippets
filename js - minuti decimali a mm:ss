@@ -1,0 +1,5 @@
+function toMins(decimalMins){
+	var mins = Math.floor(decimalMins);
+  var secs = String(Math.floor(decimalMins % 1 * 60)).padStart(2,0);
+  return mins + ':' + secs;
+}
