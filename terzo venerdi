@@ -1,0 +1,13 @@
+for (int i = 0; i < 1000; i += 3) {
+  var date = DateTime.Now.AddMonths(-i).AddDays(1 - DateTime.Now.Day);
+  int nf = 0;
+  while (true) {
+    date = date.AddDays(1);
+    if (date.DayOfWeek == DayOfWeek.Friday) {
+      nf++;
+      if (nf == 3) { Console.Write(date.ToString("dd.MM.yyyy") + "|"); break; }
+    }
+  }
+}
+
+// =QUERY(A6:G3539;"SELECT * WHERE A MATCHES '20.06.2025|21.03.2025| ecc... '")
